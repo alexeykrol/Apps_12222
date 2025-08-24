@@ -8,15 +8,15 @@ const TradingPanel = () => {
   const [price, setPrice] = useState('43521.45');
 
   return (
-    <div className="bg-gray-800 h-full">
-      <div className="p-4 border-b border-gray-700">
+    <div className="bg-orange-800 h-full">
+      <div className="p-4 border-b border-orange-700">
         <div className="flex space-x-2 mb-4">
           <button
             onClick={() => setOrderType('buy')}
             className={`flex-1 py-2 px-4 rounded font-medium transition-colors ${
               orderType === 'buy'
                 ? 'bg-green-600 text-white'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                : 'bg-orange-700 text-orange-300 hover:bg-orange-600'
             }`}
           >
             <ArrowUp className="w-4 h-4 inline mr-1" />
@@ -27,7 +27,7 @@ const TradingPanel = () => {
             className={`flex-1 py-2 px-4 rounded font-medium transition-colors ${
               orderType === 'sell'
                 ? 'bg-red-600 text-white'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                : 'bg-orange-700 text-orange-300 hover:bg-orange-600'
             }`}
           >
             <ArrowDown className="w-4 h-4 inline mr-1" />
@@ -41,7 +41,7 @@ const TradingPanel = () => {
             className={`px-3 py-1 text-sm rounded transition-colors ${
               tradeType === 'market'
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                : 'bg-orange-700 text-orange-300 hover:bg-orange-600'
             }`}
           >
             Рыночный
@@ -51,7 +51,7 @@ const TradingPanel = () => {
             className={`px-3 py-1 text-sm rounded transition-colors ${
               tradeType === 'limit'
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                : 'bg-orange-700 text-orange-300 hover:bg-orange-600'
             }`}
           >
             Лимитный
@@ -62,52 +62,52 @@ const TradingPanel = () => {
       <div className="p-4 space-y-4">
         {tradeType === 'limit' && (
           <div>
-            <label className="block text-sm text-gray-400 mb-2">Цена (USD)</label>
+            <label className="block text-sm text-orange-400 mb-2">Цена (USD)</label>
             <input
               type="text"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              className="w-full bg-gray-700 text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-orange-700 text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         )}
         
         <div>
-          <label className="block text-sm text-gray-400 mb-2">Количество (BTC)</label>
+          <label className="block text-sm text-orange-400 mb-2">Количество (BTC)</label>
           <input
             type="text"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder="0.00000000"
-            className="w-full bg-gray-700 text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full bg-orange-700 text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         
         <div className="flex space-x-2">
-          <button className="flex-1 py-1 px-2 text-xs bg-gray-700 hover:bg-gray-600 text-gray-300 rounded transition-colors">
+          <button className="flex-1 py-1 px-2 text-xs bg-orange-700 hover:bg-orange-600 text-orange-300 rounded transition-colors">
             25%
           </button>
-          <button className="flex-1 py-1 px-2 text-xs bg-gray-700 hover:bg-gray-600 text-gray-300 rounded transition-colors">
+          <button className="flex-1 py-1 px-2 text-xs bg-orange-700 hover:bg-orange-600 text-orange-300 rounded transition-colors">
             50%
           </button>
-          <button className="flex-1 py-1 px-2 text-xs bg-gray-700 hover:bg-gray-600 text-gray-300 rounded transition-colors">
+          <button className="flex-1 py-1 px-2 text-xs bg-orange-700 hover:bg-orange-600 text-orange-300 rounded transition-colors">
             75%
           </button>
-          <button className="flex-1 py-1 px-2 text-xs bg-gray-700 hover:bg-gray-600 text-gray-300 rounded transition-colors">
+          <button className="flex-1 py-1 px-2 text-xs bg-orange-700 hover:bg-orange-600 text-orange-300 rounded transition-colors">
             100%
           </button>
         </div>
         
         <div className="text-sm space-y-2">
-          <div className="flex justify-between text-gray-400">
+          <div className="flex justify-between text-orange-400">
             <span>Доступно:</span>
             <span className="text-white">2.34567890 BTC</span>
           </div>
-          <div className="flex justify-between text-gray-400">
+          <div className="flex justify-between text-orange-400">
             <span>Общая стоимость:</span>
             <span className="text-white">~$2,450.67</span>
           </div>
-          <div className="flex justify-between text-gray-400">
+          <div className="flex justify-between text-orange-400">
             <span>Комиссия:</span>
             <span className="text-white">0.1%</span>
           </div>
@@ -124,15 +124,15 @@ const TradingPanel = () => {
         </button>
       </div>
       
-      <div className="p-4 border-t border-gray-700">
+      <div className="p-4 border-t border-orange-700">
         <h4 className="text-white font-medium mb-3">Открытые ордера</h4>
         <div className="space-y-2">
           <div className="flex justify-between items-center text-sm">
-            <span className="text-gray-400">Покупка 0.1 BTC</span>
+            <span className="text-orange-400">Покупка 0.1 BTC</span>
             <button className="text-red-500 hover:text-red-400">Отменить</button>
           </div>
           <div className="flex justify-between items-center text-sm">
-            <span className="text-gray-400">Продажа 0.05 BTC</span>
+            <span className="text-orange-400">Продажа 0.05 BTC</span>
             <button className="text-red-500 hover:text-red-400">Отменить</button>
           </div>
         </div>

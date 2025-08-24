@@ -21,10 +21,10 @@ const TradingPairs = () => {
   ];
 
   return (
-    <div className="bg-gray-800 h-full overflow-hidden">
-      <div className="p-4 border-b border-gray-700">
+    <div className="bg-orange-800 h-full overflow-hidden">
+      <div className="p-4 border-b border-orange-700">
         <h3 className="text-white font-semibold mb-3">Торговые пары</h3>
-        <div className="flex text-sm text-gray-400 border-b border-gray-700 pb-2">
+        <div className="flex text-sm text-orange-400 border-b border-orange-700 pb-2">
           <div className="flex-1">Пара</div>
           <div className="w-20 text-right">Цена</div>
           <div className="w-16 text-right">24ч %</div>
@@ -35,14 +35,14 @@ const TradingPairs = () => {
         {pairs.map((pair, index) => (
           <div 
             key={pair.symbol}
-            className="flex items-center p-3 hover:bg-gray-700 cursor-pointer transition-colors border-b border-gray-700/50"
+            className="flex items-center p-3 hover:bg-orange-700 cursor-pointer transition-colors border-b border-orange-700/50"
           >
             <div className="flex-1">
               <div className="flex items-center space-x-2">
-                <Star className="w-4 h-4 text-gray-500 hover:text-yellow-500 transition-colors" />
+                <Star className="w-4 h-4 text-orange-500 hover:text-yellow-500 transition-colors" />
                 <span className="text-white font-medium">{pair.symbol}</span>
               </div>
-              <div className="text-xs text-gray-400 mt-1">Vol: {pair.volume}</div>
+              <div className="text-xs text-orange-400 mt-1">Vol: {pair.volume}</div>
             </div>
             
             <div className="w-20 text-right">

@@ -95,8 +95,8 @@ const Chart = () => {
   }, []);
 
   return (
-    <div className="bg-gray-800 h-full flex flex-col">
-      <div className="p-4 border-b border-gray-700">
+    <div className="bg-orange-800 h-full flex flex-col">
+      <div className="p-4 border-b border-orange-700">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-4">
             <h2 className="text-2xl font-bold text-white">BTC/USD</h2>
@@ -108,10 +108,10 @@ const Chart = () => {
           </div>
           
           <div className="flex space-x-2">
-            <button className="p-2 bg-gray-700 hover:bg-gray-600 rounded transition-colors">
+            <button className="p-2 bg-orange-700 hover:bg-orange-600 rounded transition-colors">
               <BarChart3 className="w-4 h-4 text-gray-300" />
             </button>
-            <button className="p-2 bg-gray-700 hover:bg-gray-600 rounded transition-colors">
+            <button className="p-2 bg-orange-700 hover:bg-orange-600 rounded transition-colors">
               <Activity className="w-4 h-4 text-gray-300" />
             </button>
           </div>
@@ -119,10 +119,10 @@ const Chart = () => {
         
         <div className="flex space-x-6 text-sm">
           <button className="text-blue-500 border-b-2 border-blue-500 pb-1">1Д</button>
-          <button className="text-gray-400 hover:text-white transition-colors">1Н</button>
-          <button className="text-gray-400 hover:text-white transition-colors">4Ч</button>
-          <button className="text-gray-400 hover:text-white transition-colors">1Ч</button>
-          <button className="text-gray-400 hover:text-white transition-colors">15М</button>
+          <button className="text-orange-400 hover:text-white transition-colors">1Н</button>
+          <button className="text-orange-400 hover:text-white transition-colors">4Ч</button>
+          <button className="text-orange-400 hover:text-white transition-colors">1Ч</button>
+          <button className="text-orange-400 hover:text-white transition-colors">15М</button>
         </div>
       </div>
       
@@ -134,22 +134,22 @@ const Chart = () => {
         />
       </div>
       
-      <div className="p-4 border-t border-gray-700">
+      <div className="p-4 border-t border-orange-700">
         <div className="grid grid-cols-4 gap-4 text-sm">
           <div>
-            <span className="text-gray-400">Открытие:</span>
+            <span className="text-orange-400">Открытие:</span>
             <span className="text-white ml-2">$42,890.12</span>
           </div>
           <div>
-            <span className="text-gray-400">Максимум:</span>
+            <span className="text-orange-400">Максимум:</span>
             <span className="text-white ml-2">$44,123.67</span>
           </div>
           <div>
-            <span className="text-gray-400">Минимум:</span>
+            <span className="text-orange-400">Минимум:</span>
             <span className="text-white ml-2">$42,456.34</span>
           </div>
           <div>
-            <span className="text-gray-400">Объем:</span>
+            <span className="text-orange-400">Объем:</span>
             <span className="text-white ml-2">1.2B</span>
           </div>
         </div>
