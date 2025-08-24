@@ -21,10 +21,10 @@ const TradingPairs = () => {
   ];
 
   return (
-    <div className="bg-gray-800 h-full overflow-hidden">
-      <div className="p-4 border-b border-gray-700">
-        <h3 className="text-white font-semibold mb-3">Торговые пары</h3>
-        <div className="flex text-sm text-gray-400 border-b border-gray-700 pb-2">
+    <div className="bg-white h-full overflow-hidden">
+      <div className="p-4 border-b border-gray-200">
+        <h3 className="text-gray-900 font-semibold mb-3">Торговые пары</h3>
+        <div className="flex text-sm text-gray-500 border-b border-gray-200 pb-2">
           <div className="flex-1">Пара</div>
           <div className="w-20 text-right">Цена</div>
           <div className="w-16 text-right">24ч %</div>
@@ -35,18 +35,18 @@ const TradingPairs = () => {
         {pairs.map((pair, index) => (
           <div 
             key={pair.symbol}
-            className="flex items-center p-3 hover:bg-gray-700 cursor-pointer transition-colors border-b border-gray-700/50"
+            className="flex items-center p-3 hover:bg-gray-50 cursor-pointer transition-colors border-b border-gray-100"
           >
             <div className="flex-1">
               <div className="flex items-center space-x-2">
-                <Star className="w-4 h-4 text-gray-500 hover:text-yellow-500 transition-colors" />
-                <span className="text-white font-medium">{pair.symbol}</span>
+                <Star className="w-4 h-4 text-gray-400 hover:text-yellow-500 transition-colors" />
+                <span className="text-gray-900 font-medium">{pair.symbol}</span>
               </div>
-              <div className="text-xs text-gray-400 mt-1">Vol: {pair.volume}</div>
+              <div className="text-xs text-gray-500 mt-1">Vol: {pair.volume}</div>
             </div>
             
             <div className="w-20 text-right">
-              <div className="text-white font-medium">${pair.price}</div>
+              <div className="text-gray-900 font-medium">${pair.price}</div>
             </div>
             
             <div className="w-16 text-right">

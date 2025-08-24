@@ -22,31 +22,31 @@ const Portfolio = () => {
   const totalValue = assets.reduce((sum, asset) => sum + parseFloat(asset.value.replace('$', '').replace(',', '')), 0);
 
   return (
-    <div className="bg-gray-800 h-full flex flex-col">
-      <div className="p-4 border-b border-gray-700">
+    <div className="bg-white h-full flex flex-col">
+      <div className="p-4 border-b border-gray-200">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-white font-semibold flex items-center">
+          <h3 className="text-gray-900 font-semibold flex items-center">
             <Wallet className="w-5 h-5 mr-2" />
             Портфолио
           </h3>
-          <button className="p-2 text-gray-400 hover:text-white transition-colors">
+          <button className="p-2 text-gray-500 hover:text-gray-900 transition-colors">
             <PieChart className="w-4 h-4" />
           </button>
         </div>
         
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-gray-700 rounded p-3">
-            <div className="text-sm text-gray-400">Общая стоимость</div>
-            <div className="text-xl font-bold text-white">${totalValue.toLocaleString()}</div>
+          <div className="bg-gray-50 rounded p-3">
+            <div className="text-sm text-gray-600">Общая стоимость</div>
+            <div className="text-xl font-bold text-gray-900">${totalValue.toLocaleString()}</div>
             <div className="flex items-center text-sm text-green-500 mt-1">
               <TrendingUp className="w-3 h-3 mr-1" />
               +2.34% (24ч)
             </div>
           </div>
-          <div className="bg-gray-700 rounded p-3">
-            <div className="text-sm text-gray-400">П/У за день</div>
+          <div className="bg-gray-50 rounded p-3">
+            <div className="text-sm text-gray-600">П/У за день</div>
             <div className="text-xl font-bold text-green-500">+$2,847.32</div>
-            <div className="text-sm text-gray-400 mt-1">+1.28%</div>
+            <div className="text-sm text-gray-600 mt-1">+1.28%</div>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@ const Portfolio = () => {
             {assets.map((asset, index) => (
               <div 
                 key={asset.symbol}
-                className="bg-gray-700 rounded p-4 hover:bg-gray-600 transition-colors cursor-pointer"
+                className="bg-gray-50 rounded p-4 hover:bg-gray-100 transition-colors cursor-pointer"
               >
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center space-x-3">
@@ -65,13 +65,13 @@ const Portfolio = () => {
                       {asset.symbol.charAt(0)}
                     </div>
                     <div>
-                      <div className="text-white font-medium">{asset.symbol}</div>
-                      <div className="text-xs text-gray-400">{asset.name}</div>
+                      <div className="text-gray-900 font-medium">{asset.symbol}</div>
+                      <div className="text-xs text-gray-500">{asset.name}</div>
                     </div>
                   </div>
                   
                   <div className="text-right">
-                    <div className="text-white font-medium">{asset.value}</div>
+                    <div className="text-gray-900 font-medium">{asset.value}</div>
                     <div className={`text-sm flex items-center justify-end ${
                       asset.change >= 0 ? 'text-green-500' : 'text-red-500'
                     }`}>
@@ -86,11 +86,11 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">Количество: {asset.amount}</span>
-                  <span className="text-gray-400">{asset.percentage}% портфолио</span>
+                  <span className="text-gray-600">Количество: {asset.amount}</span>
+                  <span className="text-gray-600">{asset.percentage}% портфолио</span>
                 </div>
                 
-                <div className="mt-2 bg-gray-600 rounded-full h-2">
+                <div className="mt-2 bg-gray-200 rounded-full h-2">
                   <div 
                     className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300"
                     style={{ width: `${Math.min(asset.percentage, 100)}%` }}
@@ -102,18 +102,18 @@ const Portfolio = () => {
         </div>
       </div>
       
-      <div className="p-4 border-t border-gray-700">
+      <div className="p-4 border-t border-gray-200">
         <div className="grid grid-cols-3 gap-4 text-sm">
           <div className="text-center">
-            <div className="text-gray-400">Активы</div>
-            <div className="text-white font-medium">{assets.length}</div>
+            <div className="text-gray-600">Активы</div>
+            <div className="text-gray-900 font-medium">{assets.length}</div>
           </div>
           <div className="text-center">
-            <div className="text-gray-400">Лучший</div>
+            <div className="text-gray-600">Лучший</div>
             <div className="text-green-500 font-medium">SOL +4.12%</div>
           </div>
           <div className="text-center">
-            <div className="text-gray-400">Худший</div>
+            <div className="text-gray-600">Худший</div>
             <div className="text-red-500 font-medium">ETH -1.23%</div>
           </div>
         </div>

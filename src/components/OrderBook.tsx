@@ -24,13 +24,13 @@ const OrderBook = () => {
   ];
 
   return (
-    <div className="bg-gray-800 h-full flex flex-col">
-      <div className="p-4 border-b border-gray-700">
-        <h3 className="text-white font-semibold">Стакан заявок</h3>
+    <div className="bg-white h-full flex flex-col">
+      <div className="p-4 border-b border-gray-200">
+        <h3 className="text-gray-900 font-semibold">Стакан заявок</h3>
       </div>
       
       <div className="flex-1 overflow-hidden">
-        <div className="flex text-xs text-gray-400 px-4 py-2 border-b border-gray-700">
+        <div className="flex text-xs text-gray-500 px-4 py-2 border-b border-gray-200">
           <div className="flex-1">Цена (USD)</div>
           <div className="w-20 text-right">Объем (BTC)</div>
           <div className="w-20 text-right">Общее</div>
@@ -42,20 +42,20 @@ const OrderBook = () => {
             {sellOrders.reverse().map((order, index) => (
               <div 
                 key={`sell-${index}`}
-                className="flex items-center px-4 py-1 hover:bg-gray-700/50 transition-colors text-sm"
+                className="flex items-center px-4 py-1 hover:bg-gray-50 transition-colors text-sm"
               >
                 <div className="flex-1 text-red-400 font-mono">{order.price}</div>
-                <div className="w-20 text-right text-gray-300 font-mono">{order.amount}</div>
-                <div className="w-20 text-right text-gray-400 font-mono">{order.total}</div>
+                <div className="w-20 text-right text-gray-600 font-mono">{order.amount}</div>
+                <div className="w-20 text-right text-gray-500 font-mono">{order.total}</div>
               </div>
             ))}
           </div>
           
           {/* Current price */}
-          <div className="px-4 py-3 border-y border-gray-600 bg-gray-700/50">
+          <div className="px-4 py-3 border-y border-gray-200 bg-gray-50">
             <div className="text-center">
               <div className="text-lg font-bold text-green-500">$43,521.45</div>
-              <div className="text-xs text-gray-400">Текущая цена</div>
+              <div className="text-xs text-gray-500">Текущая цена</div>
             </div>
           </div>
           
@@ -64,26 +64,26 @@ const OrderBook = () => {
             {buyOrders.map((order, index) => (
               <div 
                 key={`buy-${index}`}
-                className="flex items-center px-4 py-1 hover:bg-gray-700/50 transition-colors text-sm"
+                className="flex items-center px-4 py-1 hover:bg-gray-50 transition-colors text-sm"
               >
                 <div className="flex-1 text-green-400 font-mono">{order.price}</div>
-                <div className="w-20 text-right text-gray-300 font-mono">{order.amount}</div>
-                <div className="w-20 text-right text-gray-400 font-mono">{order.total}</div>
+                <div className="w-20 text-right text-gray-600 font-mono">{order.amount}</div>
+                <div className="w-20 text-right text-gray-500 font-mono">{order.total}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
       
-      <div className="p-4 border-t border-gray-700">
+      <div className="p-4 border-t border-gray-200">
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div>
-            <span className="text-gray-400">Спред:</span>
-            <span className="text-white ml-2">$2.67</span>
+            <span className="text-gray-500">Спред:</span>
+            <span className="text-gray-900 ml-2">$2.67</span>
           </div>
           <div>
-            <span className="text-gray-400">Глубина:</span>
-            <span className="text-white ml-2">2.45 BTC</span>
+            <span className="text-gray-500">Глубина:</span>
+            <span className="text-gray-900 ml-2">2.45 BTC</span>
           </div>
         </div>
       </div>
