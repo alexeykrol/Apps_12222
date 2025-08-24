@@ -1,25 +1,39 @@
-# Logs
-logs
+# Игнорируем виртуальные окружения Python
+venv/
+env/
+Subtutle/
+OpenAI_API/
+.vscode/
+**/uploads/
+**/outputs/
+# Игнорируем кеши и временные файлы Python
+__pycache__/
+*.pyc
+*.pyo
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Системные файлы macOS и SQLite
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+*.sqlite3
+
+# Игнорируем библиотеки и зависимости
+Subtutle/lib/
+Subtutle/lib/python3.11/site-packages/
+
+# Игнорируем специфические большие файлы
+Subtutle/lib/python3.11/site-packages/llvmlite/binding/libllvmlite.dylib
+Subtutle/lib/python3.11/site-packages/torch/lib/libtorch_cpu.dylib
+
+# Игнорируем файлы конфигурации и загрузки
 .env
+*.srt
+*.sh
+.gitignore
+
+# Игнорируем базу данных SQLite
+backend/chat.db
+
+# Bolt specific
+.bolt/
+# Local Netlify folder
+.netlify
