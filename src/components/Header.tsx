@@ -3,7 +3,7 @@ import { User, Settings, Bell, TrendingUp } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 border-b border-gray-800 px-6 py-4">
+    <header className="bg-orange-900 border-b border-orange-800 px-6 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
