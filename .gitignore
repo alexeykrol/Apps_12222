@@ -37,3 +37,4 @@ backend/chat.db
 .bolt/
 # Local Netlify folder
 .netlify
+node_modules
