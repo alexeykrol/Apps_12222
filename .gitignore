@@ -1,0 +1,49 @@
+# Python virtual environments
+venv/
+env/
+
+# Project-specific folders
+Subtutle/
+OpenAI_API/
+
+# VS Code config
+.vscode/
+
+# Uploads and generated outputs
+**/uploads/
+**/outputs/
+
+# Python caches and logs
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+# macOS and SQLite files
+.DS_Store
+*.sqlite3
+
+# Python site-packages inside Subtutle
+Subtutle/lib/
+Subtutle/lib/python3.11/site-packages/
+
+# Specific large binaries
+Subtutle/lib/python3.11/site-packages/llvmlite/binding/libllvmlite.dylib
+Subtutle/lib/python3.11/site-packages/torch/lib/libtorch_cpu.dylib
+
+# Environment/config files
+.env
+*.srt
+*.sh
+
+# Local database
+backend/chat.db
+
+# Bolt specific
+.bolt/
+
+# Netlify local build folder
+.netlify
+
+# Node.js dependencies
+node_modules/
