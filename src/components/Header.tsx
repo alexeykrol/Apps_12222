@@ -3,11 +3,11 @@ import { User, Settings, Bell, TrendingUp } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="bg-orange-900 border-b border-orange-800 px-6 py-4">
+    <header className="bg-blue-900 border-b border-blue-800 px-6 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
-            <TrendingUp className="w-8 h-8 text-blue-500" />
+            <TrendingUp className="w-8 h-8 text-cyan-400" />
             <h1 className="text-2xl font-bold text-white">TradePro</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
